@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Activité Emprunt</title>
+</head>
+<body>
+
+    <label for="montantEmprunt">Montant d'emprunt:</label><input type="number" name="montantEmprunt" id="montantEmprunt">
+    <label for="dureeEmprunt">Durée d'emprunt (en jour):</label><input type="number" name="dureeEmprunt" id="dureeEmprunt">
+    <button id="submit">Validez</button>
+
+
+    <div id="reponse"></div>
+
+    <script type="text/javascript">
+        var validez = document.getElementById("submit");
+
+        validez.onclick = function(){
+            var montant = document.getElementById("montantEmprunt").value;
+            var duree = document.getElementById("dureeEmprunt").value;
+
+            var totalRetour = document.createElement('p');
+            totalRetour.textContent = "Le montant à rembourser est de " + (montant *(duree*1.0966)) + " €";
+
+            document.getElementById("reponse").appendChild(totalRetour);
+        }
+    </script>
+</body>
+</html>
