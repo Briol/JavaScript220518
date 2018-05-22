@@ -6,6 +6,8 @@
 </head>
 <body>
     <script type="text/javascript">
+
+        /*
         var toto = {
           "couleur" :"rouge",
           "taille" : 22,
@@ -29,7 +31,44 @@
 
         var x = toto;
         x.prenom = "Jacky";
-        var machin = toto.prenom;
+        var machin = toto.prenom;*/
+
+        //Object.prototype
+
+        if(typeof Object.create !== 'function'){
+            Object.create = function(truc){
+                var F = function() {};
+                F.prototype = truc;
+                return new F();
+            }
+        }
+
+        var machin = Object.create("bordel");
+
+        //Notion de reflexion
+
+        typeof vol.toString();// "function"
+        typeof vol.constructor(); // "function"
+
+        vol.hasOwnProperty('couleur'); // true
+        vol.hasOwnProperty('constructor'); // false
+        delete toto.couleur;
+
+        var turtle; // Marc-Alban
+        turtle = "Coucou";
+
+        function tamere(){
+            alert(turtle);
+        }
+
+        temere();
+
+        var superVariable = ();
+
+        superVariable.toto = {
+            "couleur" : "rouge",
+            "longueur" : 42
+        }
 
     </script>
 </body>
