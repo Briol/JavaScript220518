@@ -31,7 +31,7 @@
 
         var x = toto;
         x.prenom = "Jacky";
-        var machin = toto.prenom;*/
+        var machin = toto.prenom;
 
         //Object.prototype
 
@@ -69,6 +69,28 @@
             "couleur" : "rouge",
             "longueur" : 42
         }
+
+        function Voiture(modele){
+            this.modele = modele;
+        }
+
+        var tuning = new Voiture(206);
+        console.log(tuning.modele);
+
+        Voiture.prototype.demarrer = function(){
+          alert("Vroum !!!");
+        };
+
+        Voiture.prototype.roues = true;
+
+        function VoitureTuning(){
+          Voiture.apply(this.arguments);
+        };
+
+        Object.getPrototypeOf(michel);*/
+
+
+
 
     </script>
 </body>
