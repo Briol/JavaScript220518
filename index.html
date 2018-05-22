@@ -6,7 +6,31 @@
 </head>
 <body>
     <script type="text/javascript">
-        var toto =
+        var toto = {
+          "couleur" :"rouge",
+          "taille" : 22,
+        };
+
+        document.write(toto.couleur);
+        document.write(toto["couleur"]);
+
+        var titi;
+        console.log(titi.tamere); // -> affiche Undefind
+
+        var x = toto["couleur"] || "erreur";
+
+        var vol;
+        vol.horaire//undefind
+        vol.horaire.siege//TypeError
+        var truc = vol.horaire && vol.horaire.siege//-> Undefind
+
+        toto.couleur = "jaune";
+        toto.jambon = "truc con";
+
+        var x = toto;
+        x.prenom = "Jacky";
+        var machin = toto.prenom;
+
     </script>
 </body>
 </html>
