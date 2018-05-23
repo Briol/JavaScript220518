@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX on the beach</title>
+    <script type="text/javascript" src="getXMLHttpRequestObject.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        var toto = null;
+        toto = getXMLHttpRequest();
+        toto.onreadystatechange = function() {
+            if (toto.readyState == 4 && toto.status == 200) {
+                alert(toto.responseText);
+            }
+        };
+        toto.open("GET", "ajax.php?parametre1=0&parametre2=22", true);
+        toto.send(null);
+    </script>
+</body>
+</html>
