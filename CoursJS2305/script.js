@@ -4,7 +4,7 @@ function validezForm(){
     let mail = document.getElementById("mail");
     let mdp = document.getElementById("mdp");
 
-    if (nom.length > 0 && prenom.length > 0 && mail.length > 0 && mdp.length > 0){
+    if (nom.value.length > 0 && prenom.value.length > 0 && mail.value.length > 0 && mdp.value.length > 0){
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "index.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
